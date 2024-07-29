@@ -1,14 +1,26 @@
+/* Reset default margins and paddings */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poiret One', cursive; /* Use Poiret One font */
+    background-image: url('background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-attachment: fixed; /* Ensures the background stays fixed */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Navbar styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    position: fixed;
+    position: fixed; /* Fix the navbar at the top */
     width: 100%;
     top: 0;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.8); /* Slightly darker background for readability */
+    background-color: rgba(0, 0, 0, 0.8); /* Ensure navbar is visible */
 }
 
 .logo {
@@ -24,7 +36,7 @@
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px; /* Increased gap between menu items */
+    gap: 20px;
 }
 
 .navbar ul li {
@@ -45,28 +57,30 @@
     color: black;
 }
 
-.buttons {
+/* Buttons */
+.buttons, .button-div {
     display: flex;
-    gap: 20px; /* Increased gap between buttons */
+    gap: 8px; /* Slightly smaller gap between buttons */
+    justify-content: center;
 }
 
-.buttons button {
-    border: 2px solid white;
-    background-color: transparent;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+.buttons button, .button-div button {
+    padding: 10px 20px; /* Match Contact Us button size */
+    border: 1px solid #212121; /* Match Contact Us button border */
+    border-radius: 5px; /* Consistent border radius */
     font-family: 'Poiret One', cursive;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px; /* Match Contact Us button font size */
+    background-color: black; /* Match Contact Us button background */
+    color: #fff; /* Match Contact Us button text color */
+    box-shadow: 0 0 10px #212121; /* Match Contact Us button shadow */
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+    cursor: pointer;
 }
 
-.buttons button:hover {
-    background-color: white;
-    color: black;
+.buttons button:hover, .button-div button:hover {
+    background-color: #424242; /* Match Contact Us button hover */
+    color: #fff;
 }
-
 
 /* Home section styling */
 .home {
@@ -76,7 +90,6 @@
     padding: 120px 20px; /* Adjusted for spacing below the fixed navbar */
     color: white;
     min-height: 100vh; /* Ensure it covers the full viewport height */
-    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background for readability */
 }
 
 .home-text {
@@ -84,38 +97,39 @@
 }
 
 .home-text h1 {
-    font-size: 4em;
+    font-size: 5.5em; /* Slightly smaller size for better fit */
     margin: 0;
     font-weight: bold;
 }
 
 .home-text h4 {
-    font-size: 1.8em;
+    font-size: 1.6em; /* Slightly smaller for better balance */
     margin: 10px 0;
     font-weight: 300;
 }
 
 .home-text p {
-    font-size: 1.2em;
+    font-size: 1.1em; /* Slightly smaller for better readability */
     margin: 20px 0;
     line-height: 1.5;
 }
 
 .home .join-now {
-    border: 2px solid grey;
-    background-color: grey;
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
+    border: 1px solid #212121; /* Match Contact Us button border */
+    background-color: black; /* Match Contact Us button background */
+    color: #fff; /* Match Contact Us button text color */
+    padding: 10px 20px; /* Match Contact Us button size */
+    font-size: 16px; /* Match Contact Us button font size */
     font-family: 'Poiret One', cursive;
-    border-radius: 5px;
+    border-radius: 5px; /* Consistent border radius */
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 0 10px #212121; /* Match Contact Us button shadow */
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
 }
 
 .home .join-now:hover {
-    background-color: white;
-    color: black;
+    background-color: #424242; /* Match Contact Us button hover */
+    color: #fff;
 }
 
 .home-image {
@@ -129,31 +143,6 @@
     height: auto;
     border-radius: 8px; /* Optional: rounded corners for the image */
 }
-
-/* .floatBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    height: 5rem;
-    position: relative;
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 4px 6px 30px rgba(0, 0, 0, 0.1); 
-    border-radius: 6px;
-    outline: none;
-    font-size: 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    animation: float 2s ease-in-out infinite alternate-reverse;
-} */
-
-/* @keyframes float {
-    0% {
-        bottom: 0px;
-    }
-    100% {
-        bottom: 40px;
-    }
-} */
 
 /* About Us section styling */
 .about-us {
@@ -249,7 +238,6 @@ input, textarea {
 input:focus, textarea:focus {
     background-color: transparent;
     outline: transparent;
-    /* border-bottom: 2px solid #69f0ae; */
     border-bottom: 2px solid #fff;
 }
 
@@ -268,14 +256,12 @@ label {
 
 input:focus ~ label, input:not(:placeholder-shown) ~ label {
     top: -4em;
-    /* color: #69f0ae; */
     color: #fff;
     font-size: 15px;
 }
 
 textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label {
     top: -10.5em;
-    /* color: #69f0ae; */
     color: #fff;
     font-size: 15px;
 }
@@ -286,24 +272,22 @@ textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label {
 }
 
 button {
-    padding: 2%;
-    width: 50%;
-    border: 1px solid;
-    border-color: #212121;
-    border-radius: 5px;
-    font-family: inherit;
-    font-size: 18px;
-    background-color: black;
-    /* color: inherit; */
-    color: #fff;
-    box-shadow: 0 0 10px #212121;
+    padding: 10px 20px; /* Larger padding for a better button size */
+    width: auto; /* Adjust width based on content */
+    border: 1px solid #212121; /* Match Contact Us button border */
+    border-radius: 5px; /* Consistent border radius */
+    font-family: 'Poiret One', cursive;
+    font-size: 16px; /* Match Contact Us button font size */
+    background-color: black; /* Match Contact Us button background */
+    color: #fff; /* Match Contact Us button text color */
+    box-shadow: 0 0 10px #212121; /* Match Contact Us button shadow */
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #424242;
-    /* color: #69f0ae; */
+    background-color: #424242; /* Match Contact Us button hover */
     color: #fff;
-    cursor: pointer;
 }
 
 /* Media queries */
