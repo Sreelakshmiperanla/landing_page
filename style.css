@@ -75,6 +75,7 @@ body {
     box-shadow: 0 0 10px #212121; /* Match Contact Us button shadow */
     transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
     cursor: pointer;
+    margin: 10px; /* Add margin for spacing */
 }
 
 .buttons button:hover, .button-div button:hover {
@@ -125,6 +126,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 10px #212121; /* Match Contact Us button shadow */
     transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+    margin: 10px; /* Add margin for spacing */
 }
 
 .home .join-now:hover {
@@ -147,7 +149,7 @@ body {
 /* About Us section styling */
 .about-us {
     padding: 40px 20px;
-    /* background-color: rgba(0, 0, 0, 0.8);  */
+    /* background-color: rgba(0, 0, 0, 0.8); */
     color: white; /* White text color for the entire section */
     text-align: center; /* Center text inside section */
 }
@@ -283,6 +285,7 @@ button {
     box-shadow: 0 0 10px #212121; /* Match Contact Us button shadow */
     transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
     cursor: pointer;
+    margin: 10px; /* Add margin for spacing */
 }
 
 button:hover {
@@ -291,7 +294,6 @@ button:hover {
 }
 
 /* Media queries */
-
 @media screen and (max-width: 1200px) {
     .form {
         width: 70%;
